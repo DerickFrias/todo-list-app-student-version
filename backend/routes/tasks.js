@@ -3,13 +3,13 @@ const router = express.Router();
 // There is a bug in line 4 you need to fix it
 const taskModel = require("../models/taskModel";
 
-//Write a comment describing the purpose of this route
+// Route to retrieve all tasks from the database
 router.get("/", async (req, res) => {
   const tasks = await taskModel.getTasks();
   res.json(tasks);
 });
 
-// Write a comment describing the purpose of this route
+// Route to add a new task to the database
 router.post("/", async (req, res) => {
   //there is a bug in line 15 you need to fix
   const task = await taskModel.addTask(name, description);
