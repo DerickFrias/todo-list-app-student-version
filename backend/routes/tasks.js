@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
 // Route to add a new task to the database
 router.post("/", async (req, res) => {
   //there is a bug in line 15 you need to fix
-  const task = { title, description } = req.body;
+  const { title, description } = req.body;
   const task = await taskModel.addTask(title, description);
   res.status(201).json(task);
 });
